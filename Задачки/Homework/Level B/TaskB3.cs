@@ -21,8 +21,10 @@ namespace Homework
     {
         public static string Decrypt(string key)
         {
-            // Здесь необходимо написать код.
-
+            string res = "";
+            string abc = ""
+            for ( int i = 0; i < key.Length; i++) { 
+            } 
             return "";
         }
     }

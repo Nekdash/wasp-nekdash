@@ -25,11 +25,33 @@ namespace Homework
     // Ребенок 9 садится за стол 6 (трое по 2 яблока). Ребенок 10 садится за стол 5 (трое по 1 и 2/3 яблока).
     public static class TaskC1
     {
+        public static int check(List<int> list){
+            double profit;
+            double res = -1;
+            int ans = 0;
+            for ( int i = 0; i < 6; i++)
+            {
+                profit = (i + 1) / (list[i] + 1);
+                if (profit > res)
+                {
+                    res = profit;
+                    ans = i;
+                }
+            }
+            return ans;
+         }
+
         public static List<int> AppleShare(int N)
         {
-            // Здесь необходимо написать код.
+            
+            List<int> res = new List<int>() { 0, 0, 0, 0, 0, 0};
+            for ( int i  = 0; i < N; i++)
+            {
+                res[check(res)] += 1;
+            }
+            return res;
 
-            return null;
+            //return null;
         }
     }
 }

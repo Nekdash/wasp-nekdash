@@ -18,7 +18,22 @@ namespace Homework
     {
         public static List<int> OddNumbers(List<int> arr, int n)
         {
-            // Здесь необходимо написать код.
+            List<int> res = new List<int>();
+            
+            
+            for (int i = arr.Count() - 1; i >= 0; i--)
+            {
+                if (res.Count() == n)
+                {
+                    break;
+                }
+                if (arr[i] % 2 != 0)
+                {
+                    res.Insert(0, arr[i]);
+                }
+
+            }
+            return res;
 
             return null;
         }

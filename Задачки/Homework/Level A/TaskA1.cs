@@ -22,7 +22,25 @@ namespace Homework
         public static int NumberOfSquares(int limit)
         {
             // Здесь необходимо написать код.
-            
+            long sum = 0;
+            int i = 0;
+            while (sum < limit)
+            {
+                i++;
+                sum += i * i;
+                
+            }
+            if (i == 0)
+            {
+                return 0;
+            }else if (i == 1)
+            {
+                return 0;
+            } else if (i == 2)
+            {
+                return 1;
+            }
+            return i - 1;
             return 0;
         }
     }

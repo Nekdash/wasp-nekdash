@@ -22,7 +22,20 @@ namespace Homework
     {
         public static int SumCube(int n, int m)
         {
-            // Здесь необходимо написать код.
+            int sum = 0;
+            if ( n == m)
+            {
+                return 0;
+            }
+            int n_temp = n;
+            int m_temp = m;
+            n = Math.Min(n_temp, m_temp);
+            m = Math.Max(n_temp, m_temp);
+            for (int i = n + 1; i <= m; i++)
+            {
+                sum += i * i * i;
+            }
+            return sum;
 
             return 0;
         }
